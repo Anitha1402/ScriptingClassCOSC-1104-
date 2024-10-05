@@ -1,0 +1,15 @@
+# Author: Anita Mohan (100884879)
+# Date: 04-10-2024
+#Sample code when a function will return True if its parameter is a positive number else return False.
+
+def is_positive(number):
+    return number > 0
+
+if __name__ == "__main__":
+    number = float(input("Enter a number: "))
+    
+    if is_positive(number):
+        print(number, "is a positive number.")
+    else:
+        print(number, "is not a positive number.")
+
