@@ -1,0 +1,55 @@
+# Author: Anitha Mohan, Ankitha
+#Date: 04-10-2024
+# This program provides three functionalities:
+# 1. Check if a number is positive.
+# 2. Calculate the sum of the digits of a number.
+# 3. Remove vowels from a given string.
+
+# Returns True if the number is positive, otherwise False.
+def is_positive(number):
+    return number > 0
+
+# Returns the sum of the digits in the given number.
+def get_sum(n):
+    total = 0  
+    for digit in str(n): 
+        total += int(digit) 
+    return total  
+
+# Returns the input string with all vowels removed.
+def strip_vowels(string):
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'] 
+    result = ""  
+    for char in string:  # Loop through each character in the input string
+        if char not in vowels: 
+            result += char 
+    return result  
+
+ # Display options for the user 
+if __name__ == "__main__":
+    print("Choose an option:")
+    print("1. Check if a number is positive")
+    print("2. Calculate the sum of digits of a number")
+    print("3. Remove vowels from a string")
+    
+    choice = int(input("\nEnter your choice (1/2/3): "))  
+
+    if choice == 1: 
+        number = float(input("Enter a number: ")) 
+        if is_positive(number):  # Check if the number is positive
+            print(number, "is a positive number.")
+        else:
+            print(number, "is not a positive number.")
+    
+    elif choice == 2:  
+        number = int(input("Enter a number: "))  
+        result = get_sum(number)  # Calculate the sum of digits
+        print("The sum of the digits in the given number is:", result)
+    
+    elif choice == 3:  
+        input_string = input("Enter a string: ")  # Get a string from the user
+        result = strip_vowels(input_string)  # Remove vowels from the string
+        print("\nAfter removing vowels:", result)
+    
+    else:  # Handling invalid choices
+        print("Invalid choice! Please choose between 1, 2, or 3.")
