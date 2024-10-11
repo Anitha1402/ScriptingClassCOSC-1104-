@@ -1,0 +1,16 @@
+# Author: Anita Mohan (100884879)
+# Date: 04-10-2024
+#Sample code that takes an integer parameter and adds up its digits, returning the sum of its digits.
+
+
+def getSum(n):
+    total = 0  
+    for digit in str(n):  
+        total = total + int(digit) 
+    return total 
+
+
+n = int(input("Enter a number: ")) 
+result = getSum(n) 
+print("The sum of the digits in the given number is :", result) 
+   
