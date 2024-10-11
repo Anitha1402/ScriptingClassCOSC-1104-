@@ -1,0 +1,18 @@
+# Author: Anita Mohan (100884879)
+# Date: 04-10-2024
+# Sample code that remove vowels from a string
+
+def strip_vowels(string):
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']  
+    result = ""  
+
+    for i in range(len(string)):
+        if string[i] not in vowels:  # Checking if the character is not a vowel
+            result = result + string[i]  
+
+    return result 
+
+input_string = input("Enter a string: ") 
+output_string = strip_vowels(input_string) 
+
+print("\nAfter removing vowels:", output_string) 
