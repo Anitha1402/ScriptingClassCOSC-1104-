@@ -1,0 +1,10 @@
+people:
+  - jay
+  - mandy
+expenses:
+  jay:
+    food:
+      amount: 100
+      split_with:
+        - jay
+        - mandy
